@@ -8,6 +8,8 @@ import './style.common/App.scss'
 import SpecButtons from "../SpecButtons/SpecButtons";
 import Output from "../Output/Output";
 
+import image from '../../assets/image.jpg'
+
 type State<T> = [state: T, setter: any]
 export type Handler = (...args: any[]) => any
 
@@ -127,7 +129,7 @@ const App = () => {
         }
         if(typeTag == 'image') {
             findRaw.md_tag = '![]'
-            findRaw.raw_text = '(../../assets/image.jpg)';
+            findRaw.raw_text = `(${image})`;
         }
         if(typeTag == 'url') {
             findRaw.raw_text = '<http://google.com>';
