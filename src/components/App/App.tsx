@@ -75,7 +75,13 @@ const App = () => {
     const onKeyDown = (e: KeyboardEvent) => {
         if (!isCursor) return
 
+
         const {key} = e
+
+        if(key == 'ArrowUp' || key == 'ArrowDown' || key == 'ArrowLeft' || key == 'ArrowRight') {
+            return;
+        }
+
         if (key == 'Enter') {
             const lastRow = raws[raws.length - 1]
 
